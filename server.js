@@ -21,9 +21,13 @@ app.use("/api/contact", require("./routes/contact"));
 
 app.use("/api/user", require("./routes/user"));
 
+app.use((req,res)=>{
+	res.send("API is runnig ...")
+})
+
 // 3 create port
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT; 
 
 //5 create server
 
